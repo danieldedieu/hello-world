@@ -1,0 +1,18 @@
+curl -X GET \
+  http://192.168.10.80/restconf/api/config/native/interface/Loopback/200 \
+  -H 'Accept: application/vnd.yang.data+json' \
+  -H 'Authorization: Basic YWRtaW46Y2lzY28=' \
+  -H 'Content-Type: application/vnd.yang.data+json' \
+  -d '{
+  "ned:Loopback": {
+    "name": 200,
+    "ip": {
+      "address": {
+        "primary": {
+          "address": "160.99.1.1",
+          "mask": "255.255.255.0"
+        }
+      }
+    }
+  }
+}'
